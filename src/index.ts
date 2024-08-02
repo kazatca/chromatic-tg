@@ -1,18 +1,12 @@
-import path from "path";
 import dedent from "dedent";
 import express from "express";
 import { Telegraf } from "telegraf";
 import { getBuildMessage } from "./build";
-import { Body, Config } from "./types";
 import { getReviewMessage } from "./review";
 import { getReviewDecisionMessage } from "./review-decision";
+import { Body } from "./types";
+import {config} from './config'
 
-const config: Config = require(path.join(process.cwd(), "config.json"));
-
-if (!config) {
-  console.error("Config not found");
-  process.exit(1);
-}
 
 const app = express();
 

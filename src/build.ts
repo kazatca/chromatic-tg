@@ -1,4 +1,5 @@
 import { Build } from "./types";
+import {config} from './config'
 
 const statusToMessage: Record<Build["status"], string> = {
   PUBLISHED: "🔵 Storybook published",
@@ -13,5 +14,9 @@ const statusToMessage: Record<Build["status"], string> = {
   FAILED: "🔴 Error",
 };
 
-export const getBuildMessage = (build: Build) =>
-  build.result === "TIMEOUT" ? "⚫️ Timed out" : statusToMessage[build.status];
+export const getBuildMessage = (build: Build) => {
+  if(config.ignoreStatus?.build?.includes(build.status)) {
+      return;
+  }
+  return build.result === "TIMEOUT" ? "⚫️ Timed out" : statusToMessage[build.status];
+}

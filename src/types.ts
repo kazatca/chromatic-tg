@@ -6,6 +6,11 @@ interface TGConfig {
 export interface Config {
   tg: TGConfig
   port: number
+  ignoreStatus: {
+    build: BuildStatus[]
+    review: ReviewStatus[]
+    reviewDecision: ReviewDecisionStatus[]
+  }
 }
 
 type BuildStatus =
