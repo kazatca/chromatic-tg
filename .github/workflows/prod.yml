@@ -1,0 +1,26 @@
+name: build prod
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Login to registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: kazatca
+        password: ${{ secrets.PAT }}
+
+    - name: Build
+      run: docker build -t ghcr.io/kazatca/chromatic-tg:latest .
+    
+    - name: Publish
+      run: docker push ghcr.io/kazatca/chromatic-tg:latest
