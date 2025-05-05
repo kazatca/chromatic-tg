@@ -91,7 +91,7 @@
   "commit_status": {
     "key": "1259466324",
     "type": "build",
-    "state": "SUCCESSFUL",
+    "state": "FAILED",
     "name": "Pipeline #1386 for refactor/deploy",
     "refname": "refactor/deploy",
     "commit": {
