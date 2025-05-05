@@ -1,12 +1,8 @@
-import dedent from "dedent";
 import express from "express";
 import { Telegraf } from "telegraf";
-import { getBuildMessage } from "./build";
-import { getReviewMessage } from "./review";
-import { getReviewDecisionMessage } from "./review-decision";
-import { Body } from "./types";
-import {config} from './config'
-
+import { config } from "./config";
+import { getMessage as getChromaticMessage } from "./chromatic";
+import { getMessage as getBitbucketMessage } from "./bitbucket";
 
 const app = express();
 
@@ -27,48 +23,23 @@ const sendMessage = async (message: string) => {
   }
 };
 
-const getMessage = async (event: Body) => {
-  switch (event.event) {
-    case "build": {
-      const message = getBuildMessage(event.build);
-      if (!message) {
-        return;
-      }
-      return dedent`${message} <a href="${event.build.webUrl}">Build ${event.build.number}</a>`;
-    }
-
-    case "review": {
-      const message = getReviewMessage(event.review);
-      if (!message) {
-        return;
-      }
-      return dedent`${message} <a href="${event.review.webUrl}">Review ${event.review.number}</a>`;
-    }
-
-    case "review-decision": {
-      const message = getReviewDecisionMessage(event.reviewDecision);
-      if (!message) {
-        return;
-      }
-      return dedent`${message} <a href="${event.reviewDecision.review.webUrl}">Review ${event.reviewDecision.review.number}</a>`;
-    }
-  }
-};
-
-const handleWebhook = async (event: Body) => {
-  const message = await getMessage(event);
-  if (message) {
-    await sendMessage(message);
-  }
-};
-
 app.get("/", (_req, res) => {
   res.send("OK");
 });
 
-app.post("/webhook", express.json(), (req, res) => {
-  handleWebhook(req.body);
-  res.send("OK");
+const hooks: [string, (event: any) => string | undefined][] = [
+  ["chromatic", getChromaticMessage],
+  ["bitbucket", getBitbucketMessage],
+];
+
+hooks.forEach(([hook, getMessage]) => {
+  app.post(`/webhook/${hook}`, express.json(), (req, res) => {
+    const message = getMessage(req.body);
+    if (message) {
+      sendMessage(message);
+    }
+    res.send("OK");
+  });
 });
 
 app.listen(config.port, () => {

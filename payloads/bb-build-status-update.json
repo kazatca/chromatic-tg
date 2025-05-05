@@ -1,0 +1,160 @@
+{
+  "repository": {
+    "type": "repository",
+    "full_name": "aircloudsolutions/aircloud-desktop",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/aircloudsolutions/aircloud-desktop"
+      },
+      "html": {
+        "href": "https://bitbucket.org/aircloudsolutions/aircloud-desktop"
+      },
+      "avatar": {
+        "href": "https://bytebucket.org/ravatar/%7Bc71da832-4a0e-4f89-8eb2-2b1446c98a77%7D?ts=3509431"
+      }
+    },
+    "name": "AirCloud-Desktop",
+    "scm": "git",
+    "website": null,
+    "owner": {
+      "display_name": "Nextop",
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/workspaces/%7B4d446d95-6977-4553-97e4-f34acff63075%7D"
+        },
+        "avatar": {
+          "href": "https://bitbucket.org/account/aircloudsolutions/avatar/"
+        },
+        "html": {
+          "href": "https://bitbucket.org/%7B4d446d95-6977-4553-97e4-f34acff63075%7D/"
+        }
+      },
+      "type": "team",
+      "uuid": "{4d446d95-6977-4553-97e4-f34acff63075}",
+      "username": "aircloudsolutions"
+    },
+    "workspace": {
+      "type": "workspace",
+      "uuid": "{4d446d95-6977-4553-97e4-f34acff63075}",
+      "name": "Nextop",
+      "slug": "aircloudsolutions",
+      "links": {
+        "avatar": {
+          "href": "https://bitbucket.org/workspaces/aircloudsolutions/avatar/?ts=1729297326"
+        },
+        "html": {
+          "href": "https://bitbucket.org/aircloudsolutions/"
+        },
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/workspaces/aircloudsolutions"
+        }
+      }
+    },
+    "is_private": true,
+    "project": {
+      "type": "project",
+      "key": "NXP",
+      "uuid": "{89b2274a-c241-4763-b9ec-ef82db36ac4c}",
+      "name": "Nextop Main Project",
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/workspaces/aircloudsolutions/projects/NXP"
+        },
+        "html": {
+          "href": "https://bitbucket.org/aircloudsolutions/workspace/projects/NXP"
+        },
+        "avatar": {
+          "href": "https://bitbucket.org/aircloudsolutions/workspace/projects/NXP/avatar/32?ts=1700942406"
+        }
+      }
+    },
+    "uuid": "{c71da832-4a0e-4f89-8eb2-2b1446c98a77}",
+    "parent": null
+  },
+  "actor": {
+    "display_name": "Nextop",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/workspaces/%7B4d446d95-6977-4553-97e4-f34acff63075%7D"
+      },
+      "avatar": {
+        "href": "https://bitbucket.org/account/aircloudsolutions/avatar/"
+      },
+      "html": {
+        "href": "https://bitbucket.org/%7B4d446d95-6977-4553-97e4-f34acff63075%7D/"
+      }
+    },
+    "type": "team",
+    "uuid": "{4d446d95-6977-4553-97e4-f34acff63075}",
+    "username": "aircloudsolutions"
+  },
+  "commit_status": {
+    "key": "1259466324",
+    "type": "build",
+    "state": "SUCCESSFUL",
+    "name": "Pipeline #1386 for refactor/deploy",
+    "refname": "refactor/deploy",
+    "commit": {
+      "type": "commit",
+      "hash": "aa45b41dcddca4448bacb4a1e5704d2fde8eaa1f",
+      "date": "2025-05-04T17:39:02+00:00",
+      "author": {
+        "type": "author",
+        "raw": "bitbucket-pipelines <commits-noreply@bitbucket.org>"
+      },
+      "message": "[skip ci] bump\n",
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/aircloudsolutions/aircloud-desktop/commit/aa45b41dcddca4448bacb4a1e5704d2fde8eaa1f"
+        },
+        "html": {
+          "href": "https://bitbucket.org/aircloudsolutions/aircloud-desktop/commits/aa45b41dcddca4448bacb4a1e5704d2fde8eaa1f"
+        },
+        "diff": {
+          "href": "https://api.bitbucket.org/2.0/repositories/aircloudsolutions/aircloud-desktop/diff/aa45b41dcddca4448bacb4a1e5704d2fde8eaa1f"
+        },
+        "approve": {
+          "href": "https://api.bitbucket.org/2.0/repositories/aircloudsolutions/aircloud-desktop/commit/aa45b41dcddca4448bacb4a1e5704d2fde8eaa1f/approve"
+        },
+        "comments": {
+          "href": "https://api.bitbucket.org/2.0/repositories/aircloudsolutions/aircloud-desktop/commit/aa45b41dcddca4448bacb4a1e5704d2fde8eaa1f/comments"
+        },
+        "statuses": {
+          "href": "https://api.bitbucket.org/2.0/repositories/aircloudsolutions/aircloud-desktop/commit/aa45b41dcddca4448bacb4a1e5704d2fde8eaa1f/statuses"
+        },
+        "patch": {
+          "href": "https://api.bitbucket.org/2.0/repositories/aircloudsolutions/aircloud-desktop/patch/aa45b41dcddca4448bacb4a1e5704d2fde8eaa1f"
+        }
+      }
+    },
+    "url": "https://bitbucket.org/aircloudsolutions/aircloud-desktop/addon/pipelines/home#!/results/1386",
+    "repository": {
+      "type": "repository",
+      "full_name": "aircloudsolutions/aircloud-desktop",
+      "links": {
+        "self": {
+          "href": "https://api.bitbucket.org/2.0/repositories/aircloudsolutions/aircloud-desktop"
+        },
+        "html": {
+          "href": "https://bitbucket.org/aircloudsolutions/aircloud-desktop"
+        },
+        "avatar": {
+          "href": "https://bytebucket.org/ravatar/%7Bc71da832-4a0e-4f89-8eb2-2b1446c98a77%7D?ts=3509431"
+        }
+      },
+      "name": "AirCloud-Desktop",
+      "uuid": "{c71da832-4a0e-4f89-8eb2-2b1446c98a77}"
+    },
+    "description": "",
+    "created_on": "2025-05-05T10:03:51.354310+00:00",
+    "updated_on": "2025-05-05T10:12:25.759776+00:00",
+    "links": {
+      "self": {
+        "href": "https://api.bitbucket.org/2.0/repositories/aircloudsolutions/aircloud-desktop/commit/aa45b41dcddca4448bacb4a1e5704d2fde8eaa1f/statuses/build/1259466324"
+      },
+      "commit": {
+        "href": "https://api.bitbucket.org/2.0/repositories/aircloudsolutions/aircloud-desktop/commit/aa45b41dcddca4448bacb4a1e5704d2fde8eaa1f"
+      }
+    }
+  }
+}

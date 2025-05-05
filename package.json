@@ -1,11 +1,12 @@
 {
-  "name": "chromatic-tg",
+  "name": "@skyspace/integration",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "tsx ./src/index.ts",
     "build": "tsc",
+    "tsc": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
