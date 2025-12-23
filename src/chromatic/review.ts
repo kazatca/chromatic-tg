@@ -11,5 +11,8 @@ export const getReviewMessage = (review: Review) => {
   if (config.ignoreStatus?.review?.includes(review.status)) {
     return;
   }
+  if(review.baseRefName !== "master") {
+    return;
+  }
   return statusToMessage[review.status];
 };
